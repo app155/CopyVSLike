@@ -72,7 +72,7 @@ public class Weapon : MonoBehaviour
                 Place();
                 break;
             case 1:
-                speed = 0.3f * Character.AtkRate;
+                speed = 0.5f * Character.AtkRate;
                 break;
             default:
                 break;
@@ -108,7 +108,7 @@ public class Weapon : MonoBehaviour
             bullet.Rotate(rotVec);
             bullet.Translate(bullet.up * 1.5f, Space.World);
 
-            bullet.GetComponent<Bullet>().Init(dmg, -1, Vector3.zero);
+            bullet.GetComponent<Bullet>().Init(dmg, -100, Vector3.zero);
         }
     }
 
